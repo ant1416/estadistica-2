@@ -6,3 +6,22 @@ editor: visual
 ---
 
 }holahola nose q hare aqui
+
+```{r}
+library(tidyverse)
+library(psych)
+library(haven)
+library(readxl)
+
+ELSOC17 <- read_dta("ELSOC_W02_v3.00_Stata14.dta")
+View(ELSOC17)
+
+
+
+
+
+
+
+```
+
+sdkv\<sd
