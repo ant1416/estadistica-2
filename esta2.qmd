@@ -13,8 +13,9 @@ library(psych)
 library(haven)
 library(readxl)
 
-ELSOC17 <- read_dta("ELSOC_W02_v3.00_Stata14.dta")
-View(ELSOC17)
+View(elsoc_wide_2016_2023)
+
+elsoc_wide_2016_2023 <- elsoc_wide_2016_2023 %>% select(s25_01_w02, s25_02_w02, s25_04_w02, s29_w02) # sobre capital cultural, si los padres...
 
 
 
