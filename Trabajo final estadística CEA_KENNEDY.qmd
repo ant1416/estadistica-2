@@ -34,10 +34,6 @@ load("~/GitHub/estadistica-2/ELSOC_Wide_2016_2023.RData")
 
 View(elsoc_wide_2016_2023)
 
-names(elsoc_wide_2016_2023)[grepl("_w07$", names(elsoc_wide_2016_2023))]
-
-
-
 elsoc_wide_2016_2023 <- elsoc_wide_2016_2023 %>% select(c18_05_w07, c18_06_w07, c18_07_w07, m39_w07, c15_w07, c25_w07, m01_w07) #primeras 3 c18 son la escala de sumision autoritaria, y m39 sobre religion, asistencia a cosas religiosas , c15 ideologia politica, c25 aprobacion o no gobierno autoritaria binaria y m01 nuvel educativo, el w07 significa ola7
 ```
 
@@ -160,4 +156,58 @@ alpha_sumision <- alpha(
 )
 
 alpha_sumision
+```
+
+ergwrg
+
+```{r}
+# Eliminar casos con datos perdidos en las variables 
+
+datos_modelo <- elsoc_wide_2016_2023 %>%
+  drop_na(
+    gobierno_autoritario,
+    sumision_autoritaria,
+    posicion_politica,
+    nivel_estudio,
+    frecuencia_religiosa
+  )
+summary(datos_modelo)
+```
+
+gbwrtb
+
+modelo base
+
+```{r}
+#glm modelo base
+
+modelo_base <- glm(
+  gobierno_autoritario ~
+    sumision_autoritaria +
+    posicion_politica +
+    nivel_estudio,
+  data = datos_modelo,
+  family = binomial(link = "logit")
+)
+
+summary(modelo_base)
+
+```
+
+modelo ampliado
+
+```{r}
+#modelo ampliado
+
+modelo_ampliado <- glm(
+  gobierno_autoritario ~
+    sumision_autoritaria +
+    posicion_politica +
+    nivel_estudio +
+    frecuencia_religiosa,
+  data = datos_modelo,
+  family = binomial(link = "logit")
+)
+
+summary(modelo_ampliado)
 ```
