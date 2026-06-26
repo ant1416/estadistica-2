@@ -7,7 +7,13 @@ editor: visual
 
 ### Introduccion:
 
-En la presente investigacion se analizaran factores que podrian influenciar el apoyo al autoritarismo en chile, centrandonos principalmente en como la influencia temprana de la cultura podria
+En la presente investigacion se analizaran factores que podrian influenciar el apoyo al autoritarismo en chile, centrandonos principalmente en como la influencia o no influencia temprana de la cultura podria moldear un mayor rechazo o aceptacion a estas formas de gobierno autoritarias en nuestro pais.
+
+Para comenzar, definiremos primeramente que es el autoritarismo. segun altemayer.... diferencia entre diferentes tipos de autoritarismo...
+
+para analizar este fenomeno, nos vamos a apoyar de bordieu... capital cultural...
+
+La exposición temprana a actividades culturales, libros y espacios artísticos puede contribuir a la formación de disposiciones cognitivas y culturales asociadas a una mayor apertura hacia la diversidad de perspectivas y a una valoración más positiva de instituciones democráticas.
 
 ```{r}
 library(tidyverse)
@@ -15,9 +21,12 @@ library(psych)
 library(haven)
 library(readxl)
 
+
+load("~/GitHub/estadistica-2/ELSOC_Wide_2016_2023.RData")
+
 View(elsoc_wide_2016_2023)
 
-elsoc_wide_2016_2023 <- elsoc_wide_2016_2023 %>% select(s25_01_w02, s25_02_w02, s25_04_w02, s29_w02) # sobre capital cultural, si los padres...
+elsoc_wide_2016_2023 <- elsoc_wide_2016_2023 %>% select(s25_01_w02, s25_02_w02, s25_04_w02, s29_w02, F5_0) # sobre capital cultural, si los padres...
 
 
 
