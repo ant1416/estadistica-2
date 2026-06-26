@@ -5,7 +5,9 @@ format: html
 editor: visual
 ---
 
-}holahola nose q hare aqui
+### Introduccion:
+
+En la presente investigacion se analizaran factores que podrian influenciar el apoyo al autoritarismo en chile, centrandonos principalmente en como la influencia temprana de la cultura podria
 
 ```{r}
 library(tidyverse)
