@@ -41,12 +41,97 @@ load("~/GitHub/estadistica-2/ELSOC_Wide_2016_2023.RData")
 
 View(elsoc_wide_2016_2023)
 
-elsoc_wide_2016_2023 <- elsoc_wide_2016_2023 %>% select(c18_05_w07, c18_06_w07, c18_07_w07, m39_w07, m38_w07, m38_otro_w07, c15_w07, c25_w07, m01_w07) #primeras 3 c18 son la escala de sumision autoritaria, m38 y m39 sobre religion, asistencia a cosas religiosas y si pertenece a alguna religion, c15 ideologia politica, c25 aprobacion o no gobierno autoritaria binaria y m01 nuvel educativo, el w07 significa ola7
+names(elsoc_wide_2016_2023)[grepl("_w07$", names(elsoc_wide_2016_2023))]
+
+
+
+elsoc_wide_2016_2023 <- elsoc_wide_2016_2023 %>% select(c18_05_w07, c18_06_w07, c18_07_w07, m39_w07, c15_w07, c25_w07, m01_w07) #primeras 3 c18 son la escala de sumision autoritaria, y m39 sobre religion, asistencia a cosas religiosas , c15 ideologia politica, c25 aprobacion o no gobierno autoritaria binaria y m01 nuvel educativo, el w07 significa ola7
 ```
 
 sdvskdnvlf
 
 ```{r}
-#recodificacion:
 
+
+
+#revisar si hay variables na
+
+summary(elsoc_wide_2016_2023)
+
+table(elsoc_wide_2016_2023$c18_05_w07, useNA="always")
+table(elsoc_wide_2016_2023$c18_06_w07, useNA="always")
+table(elsoc_wide_2016_2023$c18_07_w07, useNA="always")
+
+table(elsoc_wide_2016_2023$c25_w07, useNA="always")
+table(elsoc_wide_2016_2023$c15_w07, useNA="always")
+table(elsoc_wide_2016_2023$m01_w07, useNA="always")
+table(elsoc_wide_2016_2023$m39_w07, useNA="always")
+
+#chequear variable nueva religion 
+
+attributes(elsoc_wide_2016_2023$m39_w07)
+```
+
+ewgnrgrg
+
+```{r}
+#crear escala sumision autoritaria
+
+elsoc_wide_2016_2023 <- elsoc_wide_2016_2023 %>%
+  mutate(
+    sumision_autoritaria =
+      rowMeans(select(., c18_05_w07:c18_07_w07),
+               na.rm = FALSE)
+  )
+```
+
+fgbngfngn
+
+dfbadbagdbn
+
+dfbgngn
+
+```{r}
+
+#recodificacion
+
+elsoc_wide_2016_2023 <- elsoc_wide_2016_2023 %>%
+  mutate(
+
+    posicion_politica = case_when(
+      c15_w07 %in% 0:3 ~ "Izquierda",
+      c15_w07 %in% 4:6 ~ "Centro",
+      c15_w07 %in% 7:10 ~ "Derecha",
+      c15_w07 %in% c(11, 12) ~ "Sin identificación",
+      TRUE ~ NA_character_
+    ) %>%
+      factor(levels = c(
+        "Izquierda",
+        "Centro",
+        "Derecha",
+        "Sin identificación"
+      )),
+
+    gobierno_autoritario = case_when(
+      c25_w07 %in% c(2, 3) ~ 1,
+      c25_w07 == 1 ~ 0,
+      TRUE ~ NA_real_
+    ) %>%
+      factor(labels = c(
+        "Preferencia por democracia",
+        "Apoyo explícito o implícito a gobierno autoritario"
+      )),
+
+    nivel_estudio = case_when(
+      m01_w07 %in% 1:5 ~ "Básica o media",
+      m01_w07 %in% 6:7 ~ "Superior técnica",
+      m01_w07 %in% 8:10 ~ "Superior universitaria",
+      TRUE ~ NA_character_
+    ) %>%
+      factor(levels = c(
+        "Básica o media",
+        "Superior técnica",
+        "Superior universitaria"
+      ))
+  )
 ```
