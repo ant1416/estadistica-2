@@ -5,23 +5,41 @@ format: html
 editor: visual
 ---
 
-## Quarto
+## 
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+### Introduccion: 
 
-## Running Code
+En la presente investigacion se analizaran factores que podrian influenciar el apoyo al autoritarismo en chile, centrandonos principalmente en como la influencia o no influencia de la religion podria moldear un mayor rechazo o aceptacion a estas formas de gobierno autoritarias en nuestro pais.
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+# Editar: 
+
+¿Qué es el autoritarismo?
+“La covariación de tres actitudes: sumisión autoritaria, agresión autoritaria y convencionalismo”
+— Altemeyer, 1981
+• El autoritarismo se expresa en la disposición a:
+– obedecer sin cuestionamiento a autoridades percibidas como legítimas
+– castigar a quienes desafían el orden establecido
+– mantener normas tradicionales rígidas
+¿Qué factores predicen el autoritarismo?
+Carrasco et al. (2021): - Sumisión y agresión autoritaria predicen preferencia por regímenes no democráticos - Actitudes sexistas están asociadas a posiciones autoritarias - Altos niveles de educación previenen la
+adhesión a regímenes autoritarios
+
+## **Variable dependiente:** codificar la preferencia por gobiernos autoritarios en una variable binaria (0 = preferencia por democracia, 1 = apoyo o indiferencia frente al autoritarismo).
+
+**Variables independientes base:** incluir como mínimo la variable de sumisión autoritaria (escala c18_05 a c18_07), nivel educativo (recodificada como en clase), y posición política (izquierda, centro, derecha, sin identificación).
+
+**Variable adicional:** cada equipo debe seleccionar al menos una nueva variable independiente no utilizada en clase, y justificar teóricamente su inclusión. Puede ser:
 
 ```{r}
-1 + 1
+library(tidyverse)
+library(psych)
+library(haven)
+library(readxl)
+
+
+load("~/GitHub/estadistica-2/ELSOC_Wide_2016_2023.RData")
+
+View(elsoc_wide_2016_2023)
+
+elsoc_wide_2016_2023 <- elsoc_wide_2016_2023 %>% select(c18_05_w07, c18_06_w07, c18_07_w07, m39_w07, m38_w07, m38_otro_w07) #por ahora solo esta la escala de religion y sumision autoritaria aca
 ```
-
-You can add options to executable code like this
-
-```{r}
-#| echo: false
-2 * 2
-```
-
-The `echo: false` option disables the printing of code (only output is displayed).
