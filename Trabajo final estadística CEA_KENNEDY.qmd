@@ -41,5 +41,5 @@ load("~/GitHub/estadistica-2/ELSOC_Wide_2016_2023.RData")
 
 View(elsoc_wide_2016_2023)
 
-elsoc_wide_2016_2023 <- elsoc_wide_2016_2023 %>% select(c18_05_w07, c18_06_w07, c18_07_w07, m39_w07, m38_w07, m38_otro_w07) #por ahora solo esta la escala de religion y sumision autoritaria aca
+elsoc_wide_2016_2023 <- elsoc_wide_2016_2023 %>% select(c18_05_w07, c18_06_w07, c18_07_w07, m39_w07, m38_w07, m38_otro_w07, c15_w07, c25_w07, m01_w07) #primeras 3 c18 son la escala de sumision autoritaria, m38 y m39 sobre religion, asistencia a cosas religiosas y si pertenece a alguna religion, c15 ideologia politica, c25 aprobacion o no gobierno autoritaria binaria y m01 nuvel educativo, el w07 significa ola7
 ```
