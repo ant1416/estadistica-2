@@ -193,7 +193,7 @@ alpha_sumision <- alpha(
 alpha_sumision
 ```
 
-e
+5.  preparación de la muestra para modelamiento
 
 ```{r}
 # Eliminar casos con datos perdidos en las variables 
