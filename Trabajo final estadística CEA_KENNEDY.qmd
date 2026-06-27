@@ -193,7 +193,7 @@ alpha_sumision <- alpha(
 alpha_sumision
 ```
 
-#### Consistencia interna (Alpha de Cronbach)  
+#### Consistencia interna (Alpha de Cronbach)
 
 La consistencia interna de la escala fue evaluada mediante el alfa de Cronbach. El resultado obtenido fue **α = 0.82** (IC95%: 0.81–0.83), lo que indica una buena consistencia interna entre los ítems que componen la escala. En consecuencia, puede considerarse una medida confiable para representar el constructo de adhesión a actitudes autoritarias.
 
@@ -275,7 +275,7 @@ En términos generales, la incorporación de la variable de religiosidad no modi
 
 `pero`
 
-### Estimación y diagnostico del modelo 
+### Estimación y diagnostico del modelo
 
 ```{r}
 #odds rattio
@@ -341,11 +341,23 @@ En conjunto, los resultados indican que el apoyo a gobiernos autoritarios se enc
 
 ### Conclusión
 
-El presente estudio tuvo como objetivo analizar la relación entre la religiosidad y el apoyo a gobiernos autoritarios en Chile utilizando datos de la Encuesta Social Longitudinal de Chile (ELSOC), Ola 7 (2023). Los resultados muestran que la **sumisión autoritaria**, la **posición política** y el **nivel educativo** constituyen predictores significativos del apoyo a gobiernos autoritarios. En cambio, la **frecuencia de asistencia a servicios religiosos** no presentó una asociación estadísticamente significativa una vez controladas las demás variables del modelo.
+## Conclusión
 
-Estos hallazgos indican que la hipótesis planteada no encuentra respaldo empírico en la muestra analizada. En consecuencia, la evidencia obtenida no permite sostener que una mayor frecuencia de participación en actividades religiosas se asocie con una mayor probabilidad de apoyar gobiernos autoritarios en el contexto chileno.
+El presente estudio tuvo como objetivo analizar la relación entre la religiosidad y el apoyo a gobiernos autoritarios en Chile utilizando datos de la Encuesta Social Longitudinal de Chile (ELSOC), Ola 7 (2023). A partir de modelos de regresión logística binaria, se evaluó si la frecuencia de asistencia a servicios religiosos se asociaba con una mayor probabilidad de apoyar o mostrarse indiferente frente a gobiernos autoritarios, controlando por variables actitudinales, políticas y educativas.
 
-Es importante señalar que la variable utilizada no buscó medir la religiosidad como una experiencia de fe o espiritualidad individual. La **frecuencia de asistencia a servicios religiosos** fue entendida como una aproximación a la dimensión práctica de la religiosidad, es decir, a la participación en espacios donde históricamente se transmiten normas, valores tradicionales y formas de relación con la autoridad. Desde esta perspectiva, la expectativa teórica era que una mayor participación pudiera reflejar una mayor internalización de valores asociados a la obediencia, el orden y el convencionalismo. Sin embargo, los resultados sugieren que dicha dimensión práctica, por sí sola, no constituye un factor explicativo del apoyo a gobiernos autoritarios cuando se consideran simultáneamente variables actitudinales, políticas y educativas.
+Los resultados muestran que el apoyo a gobiernos autoritarios es explicado principalmente por la **sumisión autoritaria**, la **posición política** y el **nivel educativo**. En particular, una mayor adhesión a actitudes de obediencia y respeto hacia la autoridad incrementa significativamente la probabilidad de apoyar gobiernos autoritarios, mientras que un mayor nivel educativo actúa como un factor asociado a una menor predisposición hacia este tipo de preferencias políticas. Asimismo, las personas que se identifican políticamente con el centro, la derecha o que no presentan identificación política exhiben mayores probabilidades de apoyar gobiernos autoritarios en comparación con quienes se identifican con la izquierda.
+
+En contraste, la incorporación de la frecuencia de asistencia a servicios religiosos no produjo una mejora sustantiva en la capacidad explicativa del modelo. La variable no alcanzó significancia estadística y apenas modificó los indicadores globales de ajuste, observándose diferencias prácticamente nulas en el pseudo R² de McFadden y un aumento tanto del AIC como del BIC. En consecuencia, la evidencia obtenida no respalda la hipótesis de que una mayor frecuencia de asistencia a servicios religiosos se asocia con una mayor probabilidad de apoyar gobiernos autoritarios.
+
+Este resultado debe interpretarse considerando la forma en que fue operacionalizada la religiosidad. La frecuencia de asistencia a servicios religiosos no fue utilizada como una medida de espiritualidad o de intensidad de las creencias religiosas, sino como un indicador de la dimensión práctica de la religiosidad, entendida como la participación en espacios donde tradicionalmente se transmiten normas, valores conservadores y formas de relación con la autoridad. La expectativa teórica, basada en los planteamientos de Altemeyer y Hunsberger (1992), era que una mayor exposición a estos espacios favoreciera una mayor internalización de valores asociados a la obediencia, el orden y el convencionalismo. Sin embargo, los resultados obtenidos no respaldan esa asociación para el caso chileno analizado.
+
+Más que refutar la propuesta teórica de Altemeyer, estos hallazgos sugieren que la relación entre religiosidad y autoritarismo puede depender del contexto sociocultural y de la forma en que ambos conceptos son medidos. En una sociedad como la chilena, caracterizada por un proceso sostenido de secularización, una creciente diversidad religiosa y una disminución de la influencia institucional de las iglesias, la asistencia a servicios religiosos podría haber perdido capacidad para representar procesos de socialización e internalización de valores tradicionales. En consecuencia, la dimensión práctica de la religiosidad, medida exclusivamente mediante la asistencia a servicios religiosos, parece insuficiente para explicar el apoyo a gobiernos autoritarios.
+
+Entre las principales limitaciones del estudio se encuentra el uso de un diseño transversal, el cual permite identificar asociaciones entre variables, pero no establecer relaciones causales. Asimismo, el análisis se basa en una única dimensión observable de la religiosidad, lo que implica una simplificación necesaria para efectos de este ejercicio de análisis estadístico. En este sentido, es importante considerar que otras dimensiones de la religiosidad —como las creencias, la importancia subjetiva de la religión o la pertenencia denominacional— podrían aportar matices adicionales que no fueron abordados en este trabajo.
+
+En futuras investigaciones, sería interesante complementar este tipo de análisis incorporando medidas más amplias de religiosidad o explorando otras variables que puedan influir en el apoyo a gobiernos autoritarios. Sin embargo, dado el carácter del presente estudio como ejercicio de análisis estadístico aplicado, los resultados obtenidos permiten ilustrar de manera adecuada el uso de modelos de regresión logística para examinar relaciones entre variables sociales.
+
+En conjunto, este estudio muestra que el apoyo a gobiernos autoritarios se encuentra más estrechamente asociado a factores actitudinales, políticos y educativos que a la frecuencia de asistencia a servicios religiosos. De este modo, los resultados permiten aportar una aproximación empírica al problema planteado, destacando la utilidad del análisis estadístico para explorar este tipo de relaciones en el contexto chileno.
 
 ### Bibliografía
 
