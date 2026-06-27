@@ -211,3 +211,48 @@ modelo_ampliado <- glm(
 
 summary(modelo_ampliado)
 ```
+
+regqerbfb
+
+```{r}
+#odds rattio
+
+exp(coef(modelo_base))
+
+exp(coef(modelo_ampliado))
+
+#intervalo de confianza en or
+
+exp(confint(modelo_base))
+
+exp(confint(modelo_ampliado))
+
+#BIC
+
+BIC(modelo_base)
+BIC(modelo_ampliado)
+
+#pseudo r al cuadrado
+install.packages("pscl")
+library(pscl)
+
+pR2(modelo_base)
+
+pR2(modelo_ampliado)
+
+#VIF
+
+install.packages("car")
+library(car)
+
+vif(modelo_base)
+
+vif(modelo_ampliado)
+
+#Cook
+
+plot(cooks.distance(modelo_base))
+
+plot(cooks.distance(modelo_ampliado))
+
+```
