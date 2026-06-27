@@ -8,7 +8,7 @@ editor: visual
 
 # Religiosidad y apoyo a gobiernos autoritarios
 
-### *Un análisis de la Encuesta Social Longitudinal de Chile (ELSOC), Ola 7*
+### *Un análisis de la Encuesta Social Longitudinal de Chile (ELSOC)*
 
 ### 
 
@@ -231,7 +231,19 @@ summary(modelo_base)
 
 ```
 
-#### Hallazgos modelo 1: 
+#### 
+
+### Modelo 1: Variables sociodemográficas y actitudinales
+
+El primer modelo de regresión logística tuvo como objetivo estimar la probabilidad de manifestar apoyo explícito o implícito a un gobierno autoritario a partir de la sumisión autoritaria, la posición política y el nivel educativo.
+
+Los resultados muestran que la **sumisión autoritaria** presenta una asociación positiva y estadísticamente significativa con el apoyo a gobiernos autoritarios (β = 0.662; *p* \< 0.001). Esto indica que, a medida que aumenta la adhesión a actitudes de obediencia y respeto hacia la autoridad, también aumenta la probabilidad de manifestar apoyo o indiferencia frente a un gobierno autoritario.
+
+En relación con la **posición política**, y tomando como categoría de referencia a quienes se identifican con la izquierda, las personas que se ubican en el **centro**, la **derecha** y quienes declaran **no tener identificación política** presentan una mayor probabilidad de apoyar un gobierno autoritario. Todas estas asociaciones resultan estadísticamente significativas (*p* \< 0.001), siendo la categoría de derecha la que exhibe el mayor efecto positivo.
+
+Respecto al **nivel educativo**, tanto quienes poseen educación superior técnica como quienes cuentan con educación superior universitaria muestran una menor probabilidad de apoyar un gobierno autoritario en comparación con quienes poseen educación básica o media. Ambos coeficientes son negativos y estadísticamente significativos, siendo el efecto más pronunciado entre quienes poseen educación universitaria.
+
+En conjunto, el modelo evidencia que las actitudes de sumisión autoritaria y la posición política constituyen predictores relevantes del apoyo a gobiernos autoritarios, mientras que un mayor nivel educativo se asocia con una menor predisposición hacia este tipo de preferencias políticas.
 
 ```{r}
 #modelo ampliado
@@ -249,7 +261,19 @@ modelo_ampliado <- glm(
 summary(modelo_ampliado)
 ```
 
-#### Hallazgos modelo ampliado: 
+### Modelo 2: Incorporación de la frecuencia religiosa
+
+El segundo modelo incorpora la **frecuencia de asistencia a servicios religiosos** como predictor adicional, con el propósito de evaluar si la religiosidad contribuye a explicar la probabilidad de apoyar un gobierno autoritario una vez controladas las variables incluidas en el modelo base.
+
+Los resultados muestran que la **sumisión autoritaria** mantiene una asociación positiva y estadísticamente significativa con el apoyo a gobiernos autoritarios (β = 0.662; *p* \< 0.001). Del mismo modo, la **posición política** continúa mostrando diferencias significativas respecto de la categoría de referencia (izquierda), observándose una mayor probabilidad de apoyo entre quienes se identifican con el centro, la derecha y quienes no presentan identificación política.
+
+Asimismo, el **nivel educativo** conserva el mismo patrón observado en el modelo anterior. Tanto la educación superior técnica como la educación superior universitaria se asocian con una menor probabilidad de apoyar un gobierno autoritario en comparación con quienes poseen educación básica o media, manteniendo asociaciones estadísticamente significativas.
+
+En contraste, la **frecuencia de asistencia a servicios religiosos** no presenta una asociación estadísticamente significativa con el apoyo a gobiernos autoritarios (β = -0.010; *p* = 0.664). Esto indica que, una vez controladas las variables actitudinales, políticas y educativas incluidas en el modelo, la frecuencia de participación religiosa no aporta evidencia suficiente para explicar diferencias en la probabilidad de apoyar un gobierno autoritario.
+
+En términos generales, la incorporación de la variable de religiosidad no modifica sustancialmente el comportamiento ni la significancia de los predictores del modelo base, lo que sugiere que la asociación entre religiosidad y apoyo a gobiernos autoritarios no encuentra respaldo empírico en los datos analizados.
+
+`pero`
 
 ### Estimación y diagnostico del modelo 
 
@@ -302,3 +326,29 @@ avg_slopes(modelo_base)
 avg_slopes(modelo_ampliado)
 
 ```
+
+### Comparación de modelos e interpretación general
+
+La comparación entre ambos modelos muestra que la incorporación de la **frecuencia de asistencia a servicios religiosos** no mejora el desempeño explicativo del modelo. Si bien el pseudo R² de McFadden aumenta levemente de **0.0705** a **0.0706**, esta diferencia es prácticamente nula. Del mismo modo, el **AIC** aumenta de **2820.3** en el modelo base a **2822.1** en el modelo ampliado, mientras que el **BIC** pasa de **2860.1** a **2867.6**, indicando un ajuste ligeramente menos favorable tras incorporar la variable de religiosidad.
+
+Los **odds ratio** muestran que la **sumisión autoritaria** constituye el predictor de mayor interés teórico, incrementando aproximadamente en un **94%** las probabilidades de apoyar un gobierno autoritario por cada punto adicional en la escala (OR = 1.94). Asimismo, en comparación con quienes se identifican con la izquierda, las personas que se ubican en el **centro** (OR = 1.78), la **derecha** (OR = 2.75) y quienes **no presentan identificación política** (OR = 2.15) exhiben mayores probabilidades de manifestar apoyo a un gobierno autoritario. En contraste, poseer **educación superior técnica** (OR = 0.74) o **educación superior universitaria** (OR = 0.50) se asocia con una menor probabilidad de respaldar este tipo de gobierno.
+
+Por su parte, la **frecuencia de asistencia a servicios religiosos** presenta un **OR = 0.99**, un intervalo de confianza que incluye el valor 1 y un coeficiente no significativo, lo que indica que esta variable no contribuye a explicar el apoyo a gobiernos autoritarios una vez controladas las demás variables del modelo. Este resultado debe interpretarse considerando el enfoque teórico de la investigación. La frecuencia de asistencia no fue utilizada para medir la religiosidad entendida como creencia o espiritualidad individual, sino como un **indicador de la dimensión práctica de la religiosidad**, es decir, de la participación en espacios donde históricamente se transmiten normas, valores tradicionales y formas de relación con la autoridad. Bajo esta perspectiva, la hipótesis suponía que una mayor participación en dichos espacios podría asociarse con una mayor predisposición hacia actitudes favorables al autoritarismo. Sin embargo, los resultados obtenidos no entregan evidencia empírica que respalde esa asociación.
+
+Respecto a los diagnósticos del modelo, los valores del **GVIF ajustado** se mantienen cercanos a **1** para todas las variables, descartando problemas de multicolinealidad. Asimismo, la inspección de la distancia de Cook no evidencia observaciones con influencia desproporcionada sobre las estimaciones, lo que respalda la estabilidad de los coeficientes obtenidos.
+
+En conjunto, los resultados indican que el apoyo a gobiernos autoritarios se encuentra asociado principalmente con la **sumisión autoritaria**, la **posición política** y el **nivel educativo**, mientras que la frecuencia de asistencia a servicios religiosos no constituye un predictor significativo una vez controlados estos factores. En consecuencia, la evidencia obtenida **no permite respaldar la hipótesis de investigación**, sugiriendo que la participación en prácticas religiosas, entendida como una aproximación a la dimensión cultural y normativa de la religiosidad, no explica por sí sola una mayor probabilidad de apoyar gobiernos autoritarios en la muestra analizada.
+
+### Conclusión
+
+El presente estudio tuvo como objetivo analizar la relación entre la religiosidad y el apoyo a gobiernos autoritarios en Chile utilizando datos de la Encuesta Social Longitudinal de Chile (ELSOC), Ola 7 (2023). Los resultados muestran que la **sumisión autoritaria**, la **posición política** y el **nivel educativo** constituyen predictores significativos del apoyo a gobiernos autoritarios. En cambio, la **frecuencia de asistencia a servicios religiosos** no presentó una asociación estadísticamente significativa una vez controladas las demás variables del modelo.
+
+Estos hallazgos indican que la hipótesis planteada no encuentra respaldo empírico en la muestra analizada. En consecuencia, la evidencia obtenida no permite sostener que una mayor frecuencia de participación en actividades religiosas se asocie con una mayor probabilidad de apoyar gobiernos autoritarios en el contexto chileno.
+
+Es importante señalar que la variable utilizada no buscó medir la religiosidad como una experiencia de fe o espiritualidad individual. La **frecuencia de asistencia a servicios religiosos** fue entendida como una aproximación a la dimensión práctica de la religiosidad, es decir, a la participación en espacios donde históricamente se transmiten normas, valores tradicionales y formas de relación con la autoridad. Desde esta perspectiva, la expectativa teórica era que una mayor participación pudiera reflejar una mayor internalización de valores asociados a la obediencia, el orden y el convencionalismo. Sin embargo, los resultados sugieren que dicha dimensión práctica, por sí sola, no constituye un factor explicativo del apoyo a gobiernos autoritarios cuando se consideran simultáneamente variables actitudinales, políticas y educativas.
+
+### Bibliografía
+
+Parzen, H. (1951). \[Review of *The Authoritarian Personality*, by T. W. Adorno, E. Frenkelbrunswik, D. J. Levinson, & R. N. Sanford\]. *Publications of the American Jewish Historical Society*, *41*(1), 97–104. <https://0h10j3zqu-y-https-www-jstor-org.itmsp.museknowledge.com/stable/43059813?seq=3>
+
+Glock, C. Y. (1962). ON THE STUDY OF RELIGIOUS COMMITMENT. *Religious Education*, *57*(sup4), 98–110. <https://doi.org/10.1080/003440862057S407>
