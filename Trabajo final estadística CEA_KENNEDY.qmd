@@ -44,7 +44,7 @@ Analizar la relación entre la religiosidad y el apoyo a gobiernos autoritarios 
 
 #### Metodología
 
-El presente estudio utiliza datos de la séptima ola del Estudio Longitudinal Social de Chile (ELSOC 2023), desarrollado por el Centro de Estudios de Conflicto y Cohesión Social (COES). La población objetivo corresponde a hombres y mujeres de la muestra original y de refresco residentes en zonas urbanas del país.
+El presente estudio utiliza datos de la séptima ola del Estudio Longitudinal Social de Chile (ELSOC 2023), desarrollado por el Centro de Estudios de Conflicto y Cohesión Social (COES). La población objetivo corresponde a hombres y mujeres de la muestra original y de refresco residentes en zonas urbanas del país. Tras la recodificación de las variables y la eliminación de los casos con valores perdidos mediante el método de casos completos (*listwise deletion*), la muestra final utilizada para la estimación de los modelos de regresión logística quedó compuesta por **2.178 observaciones**.
 
 #### Operacionalización de las variables
 
@@ -354,8 +354,6 @@ Este resultado debe interpretarse considerando la forma en que fue operacionaliz
 Más que refutar la propuesta teórica de Altemeyer, estos hallazgos sugieren que la relación entre religiosidad y autoritarismo puede depender del contexto sociocultural y de la forma en que ambos conceptos son medidos. En una sociedad como la chilena, caracterizada por un proceso sostenido de secularización, una creciente diversidad religiosa y una disminución de la influencia institucional de las iglesias, la asistencia a servicios religiosos podría haber perdido capacidad para representar procesos de socialización e internalización de valores tradicionales. En consecuencia, la dimensión práctica de la religiosidad, medida exclusivamente mediante la asistencia a servicios religiosos, parece insuficiente para explicar el apoyo a gobiernos autoritarios.
 
 Entre las principales limitaciones del estudio se encuentra el uso de un diseño transversal, el cual permite identificar asociaciones entre variables, pero no establecer relaciones causales. Asimismo, el análisis se basa en una única dimensión observable de la religiosidad, lo que implica una simplificación necesaria para efectos de este ejercicio de análisis estadístico. En este sentido, es importante considerar que otras dimensiones de la religiosidad —como las creencias, la importancia subjetiva de la religión o la pertenencia denominacional— podrían aportar matices adicionales que no fueron abordados en este trabajo.
-
-En futuras investigaciones, sería interesante complementar este tipo de análisis incorporando medidas más amplias de religiosidad o explorando otras variables que puedan influir en el apoyo a gobiernos autoritarios. Sin embargo, dado el carácter del presente estudio como ejercicio de análisis estadístico aplicado, los resultados obtenidos permiten ilustrar de manera adecuada el uso de modelos de regresión logística para examinar relaciones entre variables sociales.
 
 En conjunto, este estudio muestra que el apoyo a gobiernos autoritarios se encuentra más estrechamente asociado a factores actitudinales, políticos y educativos que a la frecuencia de asistencia a servicios religiosos. De este modo, los resultados permiten aportar una aproximación empírica al problema planteado, destacando la utilidad del análisis estadístico para explorar este tipo de relaciones en el contexto chileno.
 
