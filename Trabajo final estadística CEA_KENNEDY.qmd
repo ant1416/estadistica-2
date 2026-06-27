@@ -71,7 +71,7 @@ library(haven)
 library(readxl)
 
 
-load("~/GitHub/estadistica-2/ELSOC_Wide_2016_2023.RData")
+load("ELSOC_Wide_2016_2023.RData")
 
 View(elsoc_wide_2016_2023)
 
@@ -192,6 +192,10 @@ alpha_sumision <- alpha(
 
 alpha_sumision
 ```
+
+#### Consistencia interna (Alpha de Cronbach)  
+
+La consistencia interna de la escala fue evaluada mediante el alfa de Cronbach. El resultado obtenido fue **α = 0.82** (IC95%: 0.81–0.83), lo que indica una buena consistencia interna entre los ítems que componen la escala. En consecuencia, puede considerarse una medida confiable para representar el constructo de adhesión a actitudes autoritarias.
 
 5.  preparación de la muestra para modelamiento
 
