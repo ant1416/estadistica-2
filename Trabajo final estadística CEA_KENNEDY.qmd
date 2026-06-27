@@ -213,9 +213,7 @@ datos_modelo <- elsoc_wide_2016_2023 %>%
 summary(datos_modelo)
 ```
 
-gbwrtb
-
-modelo base
+### Estimación de Modelos de Regresión Logística Binaria
 
 ```{r}
 #glm modelo base
@@ -233,7 +231,7 @@ summary(modelo_base)
 
 ```
 
-modelo ampliado
+#### Hallazgos modelo 1: 
 
 ```{r}
 #modelo ampliado
@@ -251,7 +249,9 @@ modelo_ampliado <- glm(
 summary(modelo_ampliado)
 ```
 
-regqerbfb
+#### Hallazgos modelo ampliado: 
+
+### Estimación y diagnostico del modelo 
 
 ```{r}
 #odds rattio
