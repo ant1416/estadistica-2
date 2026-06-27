@@ -32,15 +32,15 @@ En este contexto, el presente estudio busca analizar la relación entre la relig
 
 En función de lo anterior, la investigación se orienta a responder la siguiente pregunta:
 
-**¿Cuál es la relación entre la religiosidad y la adhesión a actitudes autoritarias en Chile?**
+**¿Cuál es la relación entre la religiosidad y el apoyo a gobiernos autoritarios en Chile?**
 
 **Hipótesis**
 
-Una mayor frecuencia de asistencia a servicios religiosos se asocia con una mayor probabilidad de presentar actitudes autoritarias.
+Una mayor frecuencia de asistencia a servicios religiosos se asocia con una mayor probabilidad de manifestar una actitud favorable hacia gobiernos autoritarios.
 
 **Objetivo General**
 
-Analizar la relación entre la religiosidad y la adhesión a actitudes autoritarias en la población chilena, utilizando datos de la Encuesta Social Longitudinal de Chile (ELSOC), Ola 7 (2023).
+Analizar la relación entre la religiosidad y el apoyo a gobiernos autoritarios en la población chilena, utilizando datos de la Encuesta Social Longitudinal de Chile (ELSOC), Ola 7 (2023).
 
 ## **Variable dependiente:** codificar la preferencia por gobiernos autoritarios en una variable binaria (0 = preferencia por democracia, 1 = apoyo o indiferencia frente al autoritarismo).
 
