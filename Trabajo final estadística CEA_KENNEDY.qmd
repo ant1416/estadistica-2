@@ -339,7 +339,7 @@ Respecto a los diagnósticos del modelo, los valores del **GVIF ajustado** se ma
 
 En conjunto, los resultados indican que el apoyo a gobiernos autoritarios se encuentra asociado principalmente con la **sumisión autoritaria**, la **posición política** y el **nivel educativo**, mientras que la frecuencia de asistencia a servicios religiosos no constituye un predictor significativo una vez controlados estos factores. En consecuencia, la evidencia obtenida **no permite respaldar la hipótesis de investigación**, sugiriendo que la participación en prácticas religiosas, entendida como una aproximación a la dimensión cultural y normativa de la religiosidad, no explica por sí sola una mayor probabilidad de apoyar gobiernos autoritarios en la muestra analizada.
 
-### Conclusión
+### 
 
 ## Conclusión
 
