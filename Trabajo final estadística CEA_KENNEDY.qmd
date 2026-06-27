@@ -254,4 +254,12 @@ plot(cooks.distance(modelo_base))
 
 plot(cooks.distance(modelo_ampliado))
 
+#efectos marginales
+
+library(marginaleffects)
+
+avg_slopes(modelo_base)
+
+avg_slopes(modelo_ampliado)
+
 ```

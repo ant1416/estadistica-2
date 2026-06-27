@@ -659,6 +659,52 @@ frecuencia_religiosa 1.006179  1        1.003085</code></pre>
 </figure>
 </div>
 </div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co">#efectos marginales</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(marginaleffects)</span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a><span class="fu">avg_slopes</span>(modelo_base)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+                 Term                                Contrast Estimate
+ nivel_estudio        Superior técnica - Básica o media        -0.0686
+ nivel_estudio        Superior universitaria - Básica o media  -0.1576
+ posicion_politica    Centro - Izquierda                        0.1312
+ posicion_politica    Derecha - Izquierda                       0.2305
+ posicion_politica    Sin identificación - Izquierda            0.1749
+ sumision_autoritaria dY/dX                                     0.1502
+ Std. Error     z Pr(&gt;|z|)    S   2.5 %  97.5 %
+     0.0291 -2.36   0.0185  5.8 -0.1257 -0.0115
+     0.0301 -5.24   &lt;0.001 22.5 -0.2166 -0.0986
+     0.0340  3.85   &lt;0.001 13.1  0.0645  0.1979
+     0.0406  5.68   &lt;0.001 26.2  0.1510  0.3100
+     0.0343  5.10   &lt;0.001 21.5  0.1077  0.2422
+     0.0165  9.12   &lt;0.001 63.6  0.1179  0.1825
+
+Type: response</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">avg_slopes</span>(modelo_ampliado)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+                 Term                                Contrast Estimate
+ frecuencia_religiosa dY/dX                                   -0.00216
+ nivel_estudio        Superior técnica - Básica o media       -0.06939
+ nivel_estudio        Superior universitaria - Básica o media -0.15765
+ posicion_politica    Centro - Izquierda                       0.13098
+ posicion_politica    Derecha - Izquierda                      0.23089
+ posicion_politica    Sin identificación - Izquierda           0.17471
+ sumision_autoritaria dY/dX                                    0.15014
+ Std. Error      z Pr(&gt;|z|)    S   2.5 %   97.5 %
+    0.00497 -0.435   0.6639  0.6 -0.0119  0.00759
+    0.02917 -2.379   0.0174  5.8 -0.1266 -0.01222
+    0.03010 -5.238   &lt;0.001 22.6 -0.2166 -0.09866
+    0.03403  3.849   &lt;0.001 13.0  0.0643  0.19767
+    0.04058  5.690   &lt;0.001 26.2  0.1513  0.31042
+    0.03431  5.092   &lt;0.001 21.4  0.1075  0.24196
+    0.01645  9.125   &lt;0.001 63.6  0.1179  0.18239
+
+Type: response</code></pre>
+</div>
 </div>
 </section>
 </section>
