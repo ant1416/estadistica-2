@@ -233,7 +233,7 @@ BIC(modelo_base)
 BIC(modelo_ampliado)
 
 #pseudo r al cuadrado
-install.packages("pscl")
+
 library(pscl)
 
 pR2(modelo_base)
@@ -242,7 +242,6 @@ pR2(modelo_ampliado)
 
 #VIF
 
-install.packages("car")
 library(car)
 
 vif(modelo_base)
