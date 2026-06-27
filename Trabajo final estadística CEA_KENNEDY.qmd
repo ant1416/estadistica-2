@@ -20,7 +20,7 @@ Dentro de estos factores, la religiosidad ha ocupado un lugar relevante en la li
 
 En la presente investigación se analizarán los factores que podrían influir en el apoyo a gobiernos autoritarios en Chile, centrándose particularmente en el papel de la religiosidad como un posible factor asociado a una mayor o menor disposición a respaldar este tipo de regímenes.
 
-### **Marco teórico**
+#### **Marco teórico**
 
 La propuesta de Altemeyer (1981) representa uno de los principales desarrollos contemporáneos en el estudio del autoritarismo. En ella, el autor desarrolla el concepto de **Autoritarismo de Derecha** (*Right-Wing Authoritarianism*, RWA), definido como una orientación actitudinal compuesta por tres dimensiones fundamentales: la **sumisión autoritaria**, entendida como la disposición a obedecer a las autoridades consideradas legítimas; la **agresión autoritaria**, que implica el apoyo a sanciones dirigidas hacia quienes desafían el orden establecido; y el **convencionalismo**, referido a la adhesión a normas y valores tradicionales. Desde esta perspectiva, las personas con mayores niveles de autoritarismo tenderían a mostrar una mayor predisposición a respaldar formas de autoridad fuertes y, en determinados contextos, a manifestar una mayor aceptación hacia gobiernos autoritarios.
 
@@ -42,11 +42,25 @@ Una mayor frecuencia de asistencia a servicios religiosos se asocia con una mayo
 
 Analizar la relación entre la religiosidad y el apoyo a gobiernos autoritarios en la población chilena, utilizando datos de la Encuesta Social Longitudinal de Chile (ELSOC), Ola 7 (2023).
 
-## **Variable dependiente:** codificar la preferencia por gobiernos autoritarios en una variable binaria (0 = preferencia por democracia, 1 = apoyo o indiferencia frente al autoritarismo).
+#### Metodología
 
-**Variables independientes base:** incluir como mínimo la variable de sumisión autoritaria (escala c18_05 a c18_07), nivel educativo (recodificada como en clase), y posición política (izquierda, centro, derecha, sin identificación).
+El presente estudio utiliza datos de la séptima ola del Estudio Longitudinal Social de Chile (ELSOC 2023), desarrollado por el Centro de Estudios de Conflicto y Cohesión Social (COES). La población objetivo corresponde a hombres y mujeres de la muestra original y de refresco residentes en zonas urbanas del país.
 
-**Variable adicional:** frecuencia en la que se acude a rituales religiosos
+#### Operacionalización de las variables
+
+Para capturar los constructos de interés, se procedió en primer lugar a la recodificación de los valores perdidos y respuestas no sustantivas. En particular, las categorías correspondientes a valores no válidos (códigos -999, -888, -777 y -666) en la base de datos original fueron transformadas en valores perdidos ($NA$) antes de realizar cualquier cálculo, con el fin de evitar sesgos en la estimación de los modelos.
+
+Asimismo, para asegurar la correcta dirección e interpretación teórica de los ítems continuos, la variable de asistencia a rituales religiosos fue invertida de modo que valores más altos reflejen consistentemente una mayor frecuencia de participación. La consistencia interna de la escala multítem fue evaluada mediante el coeficiente Alfa de Cronbach.
+
+- **Preferencia por Gobierno Autoritario (Variable Dependiente):** Se construyó como una variable binaria a partir del ítem `c25_w07` (escala original de 3 categorías que evalúa la preferencia por regímenes políticos). Se recodificó en dos categorías sustantivas: **0 = Preferencia por la democracia** (correspondiente a la opción original "La democracia es preferible a cualquier otra forma de gobierno") y **1 = Apoyo o indiferencia frente al autoritarismo** (que agrupa las opciones "En algunas circunstancias, un gobierno autoritario puede ser preferible a uno democrático" y "A la gente como uno, nos da lo mismo un régimen democrático que uno no democrático").
+
+- **Sumisión Autoritaria (Predictor 1):** Se construyó a partir de la batería `C18`, utilizando los ítems `c18_05_w07`, `c18_06_w07` y `c18_07_w07` (escala Likert de 1 a 5, donde 1 representa "Totalmente en desacuerdo" y 5 "Totalmente de acuerdo"), que evalúan la propensión a la obediencia, el respeto a la autoridad y el apego a las normas tradicionales. Los ítems se mantuvieron en su dirección original, de modo que valores más altos indican un mayor nivel de sumisión autoritaria. El índice final fue calculado como el promedio de los tres ítems (`rowMeans`) y su confiabilidad se reportó mediante el coeficiente Alfa de Cronbach.
+
+- **Posición Política (Predictor 2):** Se construyó a partir del ítem de autoubicación ideológica `c15_w07` (escala original de 0 a 10, donde 0 es "Izquierda" y 10 es "Derecha"). La variable fue recodificada en cuatro categorías categóricas mutuamente excluyentes: **Izquierda** (valores 0 a 3), **Centro** (valores 4 a 6), **Derecha** (valores 7 a 10) y **Sin identificación** (valores 11 y 12, correspondientes a "Ninguno" e "Independiente"), siendo esta última tratada como categoría de respuesta válida para evitar la pérdida masiva de casos.
+
+- **Nivel de Estudios (Predictor 3):** Se construyó a partir de la variable `m01_w07` que registra el máximo nivel educacional alcanzado por el encuestado. Los niveles originales fueron colapsados en tres categorías principales para facilitar la estimación del modelo: **Básica o media** (valores 1 a 5, que abarcan desde educación básica incompleta hasta media técnica o humanística completa), **Superior técnica** (valores 6 y 7, que incluyen carreras técnicas superiores incompletas y completas) y **Superior universitaria** (valores 8 a 10, que agrupa educación universitaria y estudios de postgrado).
+
+- **Frecuencia Religiosa (Variable Adicional / Predictor 4):** Se construyó a partir del ítem `m39_w07`, el cual mide la frecuencia de asistencia a servicios, cultos o rituales religiosos en una escala ordinal de 1 a 7 (donde 1 representa "Varias veces a la semana" y 7 "Nunca o casi nunca"). Para asegurar que valores más altos indiquen mayor involucramiento y facilitar la interpretación de los coeficientes, el ítem fue invertido mediante la fórmula $8 - x$. De este modo, la escala final varía de 1 a 7, donde valores superiores reflejan una mayor frecuencia acumulada de participación religiosa.
 
 ```{r}
 library(tidyverse)
