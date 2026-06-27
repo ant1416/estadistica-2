@@ -62,6 +62,8 @@ Asimismo, para asegurar la correcta dirección e interpretación teórica de los
 
 - **Frecuencia Religiosa (Variable Adicional / Predictor 4):** Se construyó a partir del ítem `m39_w07`, el cual mide la frecuencia de asistencia a servicios, cultos o rituales religiosos en una escala ordinal de 1 a 7 (donde 1 representa "Varias veces a la semana" y 7 "Nunca o casi nunca"). Para asegurar que valores más altos indiquen mayor involucramiento y facilitar la interpretación de los coeficientes, el ítem fue invertido mediante la fórmula $8 - x$. De este modo, la escala final varía de 1 a 7, donde valores superiores reflejan una mayor frecuencia acumulada de participación religiosa.
 
+1.  Carga de librerías, datos y selección de variables
+
 ```{r}
 library(tidyverse)
 library(psych)
@@ -76,7 +78,7 @@ View(elsoc_wide_2016_2023)
 elsoc_wide_2016_2023 <- elsoc_wide_2016_2023 %>% select(c18_05_w07, c18_06_w07, c18_07_w07, m39_w07, c15_w07, c25_w07, m01_w07) #primeras 3 c18 son la escala de sumision autoritaria, y m39 sobre religion, asistencia a cosas religiosas , c15 ideologia politica, c25 aprobacion o no gobierno autoritaria binaria y m01 nuvel educativo, el w07 significa ola7
 ```
 
-sdvskdnvlf
+2.  Limpieza y Tratamiento de Valores Perdidos
 
 ```{r}
 
@@ -89,8 +91,6 @@ elsoc_wide_2016_2023 <- elsoc_wide_2016_2023 %>%
     )
   )
 ```
-
-sdcSVVDV
 
 ```{r}
 
@@ -116,9 +116,7 @@ attributes(elsoc_wide_2016_2023$c18_05_w07)
 
 ```
 
-dfbadbagdbn
-
-dfbgngn
+3.  Recodificación
 
 ```{r}
 #recodificacion
@@ -170,9 +168,7 @@ elsoc_wide_2016_2023 <- elsoc_wide_2016_2023 %>%
   )
 ```
 
-WEFGWV
-
-ERBEB
+4.  Escala de sumisión autoritaria y consistencia interna
 
 ```{r}
 # Crear escala de sumisión autoritaria (promedio de los tres ítems)
@@ -197,7 +193,7 @@ alpha_sumision <- alpha(
 alpha_sumision
 ```
 
-ergwrg
+e
 
 ```{r}
 # Eliminar casos con datos perdidos en las variables 
